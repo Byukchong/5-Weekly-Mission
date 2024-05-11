@@ -1,0 +1,104 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  width: 36rem;
+  height: 39rem;
+  background-color: var(--white);
+  position: relative;
+  z-index: 5;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  padding: 3.2rem 4rem;
+}
+
+.modal__content__body {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  color: var(--gray60);
+}
+
+.exit_button {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  z-index: 5;
+}
+
+.option__container {
+  padding: 2.4rem 0;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  position: relative;
+  border: 1px solid var(--white);
+}
+.options:hover {
+  border: 1px solid var(--primary);
+}
+.options:focus {
+  background-color: var(--light-blue);
+}
+
+.selected::after {
+  content: url(../../public/check.svg);
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.options > p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #373740;
+}
+
+.options > span {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--gray60);
+  margin-left: 0.8rem;
+}
+
+.modal__content__header {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.action__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  cursor: pointer;
+  padding: 1.6rem 11.2rem;
+  background-image: linear-gradient(135deg, var(--primary) 0%, #6ae3fe 100%);
+  border-radius: 0.8rem;
+  color: #f5f5f5;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: 600;
+}

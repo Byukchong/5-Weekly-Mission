@@ -1,0 +1,131 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.card_txt_div_body {
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card_txt_div_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_time_p {
+  font-size: 1.4rem;
+  color: var(--text-content-gray);
+}
+
+.card_txt_div_body {
+  font-size: 1.6rem;
+  height: 4.9rem;
+  width: 30rem;
+}
+
+.card_txt_date {
+  font-size: 1.4rem;
+  color: var(--text-content-black);
+  margin-bottom: 1rem;
+}
+
+.card_txt_div {
+  padding: 1.5rem 2rem;
+}
+
+.noLinkText {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 3;
+}
+
+.card_favorite_icon {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  z-index: 2;
+}
+
+.card_container {
+  position: relative;
+}
+
+.card_moreoption_icon {
+  position: absolute;
+  top: 21.6rem;
+  right: 2rem;
+  z-index: 2;
+}
+
+.card_img {
+  width: 34rem;
+  height: 20rem;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media (max-width: 767px) {
+    width: 32.5rem;
+  }
+}
+
+.popover {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  height: 6.2rem;
+  position: absolute;
+  top: 23.6rem;
+  right: -5.5rem;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.options {
+  width: 100%;
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+.isHovering {
+  background-color: var(--gray10);
+}
+
+.coloredText {
+  background-color: var(--light-blue);
+}
+
+.zoomIn {
+  background-size: 130%;
+}
+
+.card_grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 34rem);
+  grid-template-rows: 33.4rem;
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+  margin: 0 auto;
+
+  @media (max-width: 1123px) {
+    grid-template-columns: repeat(2, 34rem);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 32.5rem;
+  }
+}

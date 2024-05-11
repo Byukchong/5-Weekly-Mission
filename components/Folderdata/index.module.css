@@ -1,0 +1,19 @@
+.folderProfile {
+  height: 6rem;
+  width: 6rem;
+}
+
+.ownerName {
+  font-size: 1.6rem;
+}
+
+.folderName {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.folderInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

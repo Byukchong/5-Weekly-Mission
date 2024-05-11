@@ -1,0 +1,33 @@
+.input__wrapper {
+  position: relative;
+  width: 350px;
+  height: 60px;
+}
+
+.input__form {
+  padding: 18px 15px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid var(--gray20);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.input__form::placeholder {
+  color: var(--text-content-gray);
+}
+
+.focused {
+  border: 1px solid var(--primary);
+}
+
+.error {
+  border: 1px solid var(--red);
+}
+
+.error__msg {
+  font-size: 14px;
+  line-height: 16.8px;
+  color: var(--red);
+  margin-top: 6px;
+}

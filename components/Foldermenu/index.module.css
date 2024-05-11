@@ -1,0 +1,33 @@
+.folderButtons {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.folderName {
+  font-size: 2.4rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.addFolderIcon {
+  @media (max-width: 767px) {
+    bottom: 10.1rem;
+    left: 50%;
+    position: fixed;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+}
+
+/*테블릿 1124 이상 모바일 최소여백 32       테블릿 768~1199 모바일 375 ~767    */
