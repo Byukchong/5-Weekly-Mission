@@ -7,22 +7,14 @@ import moreoptionicon from '@/public/moreoptionicon.svg';
 import { useState } from 'react';
 import ModalFolder from '@/components/modal/ModalFolder';
 import ModalDelete from '@/components/modal/ModalDelete';
+import { CardData } from '@/types/folder-type';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface Link {
-  id: string;
-  url: string;
-  image_source?: string;
-  thumbnail?: string;
-  title: string;
-  created_at: Date;
-  description: string;
-}
-
-function FolderCards({ url }: { url: string }) {
-  const card = useFetch<{ data: Link[] }>(url);
-  const cardData = card?.data;
+// function FolderCards({ url }: { url: string }) {
+function FolderCards({ cards: cardData }: { cards: CardData[] }) {
+  // const card = useFetch<{ data: Link[] }>(url);
+  // const cardData = card?.data;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalDeleteOpen, setIsModalDeleteOpen] = useState(false);
   const [popoverStates, setPopoverStates] = useState<{
@@ -59,7 +51,7 @@ function FolderCards({ url }: { url: string }) {
 
   return (
     <div className={styles.card_grid_container}>
-      {!cardData ? (
+      {!cardData.length ? (
         <div className={styles.noLinkText}>
           <p>저장된 링크가 없습니다</p>
         </div>

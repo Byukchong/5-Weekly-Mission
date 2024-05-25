@@ -39,7 +39,7 @@ const FooterWrapper = styled.footer`
   margin-top: auto; /* 페이지 컨텐츠 아래에 위치하도록 설정 */
 `;
 
-function FolderPage() {
+function FolderIdPage() {
   const router = useRouter();
   const folderId = useMemo(() => {
     const param = router.query.folderid;
@@ -77,4 +77,4 @@ function FolderPage() {
   );
 }
 
-export default FolderPage;
+export default FolderIdPage;
